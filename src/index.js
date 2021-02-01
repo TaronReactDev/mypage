@@ -2,12 +2,22 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import { BrowserRouter as Router, Switch, Route,  } from "react-router-dom";
+import Projectes from "./componentes/Projectes/index"
+
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Router >
+  <div>
+    <Switch>
+       <Route  exact path= "/"> <App/> </Route>
+      <Route   path= "/projectes"> <Projectes/> </Route>
+    
+    </Switch>
+  </div>
+  
+    </Router>,
   document.getElementById('root')
 );
 

@@ -1,0 +1,45 @@
+.mainNavigationDiv {
+  display: flex;
+  position: sticky;
+  top: 0;
+  background-color: black;
+  min-height: 50px;
+  justify-content: space-between;
+  align-items: center;
+padding: 10px;}
+
+
+
+.left{
+    display: flex;
+    justify-content: space-between;
+}
+
+.mainNavigationDiv>div >a {
+    margin:15px;
+    color:beige ;
+    // transform: 0.5s;
+    text-decoration: none;
+    font-size: 29px; 
+    transition: color 1s;
+}
+
+
+.mainNavigationDiv>div >a:hover{
+    color:  #8a8a8a;
+    
+}
+
+.Icon{
+    width: 40px;
+    height: 40px;
+    background-color: beige;
+    transition: background-color 1s;
+    border-radius: 35%;
+
+}
+
+.Icon:hover{
+    background-color:  #8a8a8a;
+
+}
