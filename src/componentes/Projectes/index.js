@@ -10,14 +10,14 @@ import "./style.scss";
 
 export default function index() {
   const imagesForProjectes = [
-    [backgroundImage1, "Github profile searcher"],
-    [backgroundImage2, "Tic-tac-toe"],
-    [backgroundImage3, "My to do list"],
-    [backgroundImage4, "github"],
-    [backgroundImage5, "github"],
+    [backgroundImage1, "Github profile searcher","githubprofilesearcher"],
+    [backgroundImage2, "Tic-tac-toe","tictactoe"],
+    [backgroundImage3, "My to do list","mytodolist"],
+    [backgroundImage4, "github",],
+    [backgroundImage5, "github",],
   ];
   const projectes = imagesForProjectes.map((elem) => {
-    return <ProjectElement images={elem[0]} text={elem[1]} />;
+    return <ProjectElement images={elem[0]} text={elem[1]} url={elem[2]}/>;
   });
 
   return (

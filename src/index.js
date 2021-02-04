@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import { BrowserRouter as Router, Switch, Route,  } from "react-router-dom";
 import Projectes from "./componentes/Projectes/index"
+import XikOik from "./componentes/Projectes/Project/X_O/Xikoik"
 
 import reportWebVitals from './reportWebVitals';
 
@@ -13,6 +14,7 @@ ReactDOM.render(
     <Switch>
        <Route  exact path= "/"> <App/> </Route>
       <Route   path= "/projectes"> <Projectes/> </Route>
+      <Route   path= "/projectestictactoe"> <XikOik/> </Route>
     
     </Switch>
   </div>

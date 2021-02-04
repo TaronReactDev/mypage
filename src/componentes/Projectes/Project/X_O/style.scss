@@ -1,0 +1,120 @@
+.containerdiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.squer {
+  width: 100px;
+  height: 100px;
+  background-color: black;
+  margin: 10px;
+  border-radius: 10px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;}
+
+.charp {
+  font-size: 90px;
+}
+
+.mainDivXikOik {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.turn {
+  width: 100%;
+  height: 50px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-size: 25px;
+  margin-bottom: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.turn > p {
+  margin: 0 auto;
+  padding: 0px;
+}
+
+.restartbtn {
+  min-width: 100px;
+  height: 50px;
+  background-color: black;
+  color: white;
+  font-size: 25px;
+  margin: 0 auto;
+  margin-top: 45px;
+  border-radius: 5px;
+}
+
+.winerDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: white;
+  font-size: 25px;
+
+  width: 330px;
+  height: 330px;
+  border-radius: 10px;
+}
+
+.resultMainDiv {
+  display: flex;
+  flex-direction: row;
+  min-width: 95%;
+  margin: 10px;
+  justify-content: start;
+  border: 1px solid black;
+  height: 130px;
+}
+
+.titlesOfResult {
+  padding: 10px;
+  margin: 15px;
+  background: black;
+  color: white;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 20px;
+}
+.result {
+  padding: 10px;
+  margin: 15px;
+  background: coral;
+  color: white;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 20px;
+}
+
+.result >div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.result >div> span {
+  margin-right: 70px;
+  // display: flex;
+  // flex-direction: row;
+}
+.cleareResulte{
+  margin: 15px;
+  background: black;
+  color: white;
+  border-radius: 5px;
+  width: 80px;
+  font-size: 20px;
+}
