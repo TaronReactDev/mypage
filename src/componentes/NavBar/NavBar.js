@@ -11,7 +11,7 @@ export default function NavBar() {
         {/* <a href={"#"}>About me</a> */}
         <a href={"#work"}>Work</a>
         <a href={"#educ"}>Education</a>
-        <a href={"#"}>Skills</a>
+        <a href={"#skill"}>Skills</a>
 
         <Link to="/projectes">Projectes</Link>
 

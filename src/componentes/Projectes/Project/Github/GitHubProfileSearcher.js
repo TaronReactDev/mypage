@@ -27,7 +27,6 @@ export default function GitHubProfileSearcher() {
     ev.preventDefault();
     const name = ev.target.asd.value;
     searche(name);
-    console.log(name);
   };
 
   const searche = async (name) => {
@@ -60,7 +59,7 @@ export default function GitHubProfileSearcher() {
 
   useEffect(() => {
     const page = Math.ceil(data?.data.total_count / 6);
-    setPages(page);
+    setPages(page)
   }, [data]);
 
 

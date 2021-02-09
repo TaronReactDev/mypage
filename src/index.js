@@ -5,6 +5,9 @@ import App from './App';
 import { BrowserRouter as Router, Switch, Route,  } from "react-router-dom";
 import Projectes from "./componentes/Projectes/index"
 import XikOik from "./componentes/Projectes/Project/X_O/Xikoik"
+import Github from "./componentes/Projectes/Project/Github/GitHubProfileSearcher"
+import Clicker from "./componentes/Projectes/Project/Clicker/index"
+import Todo from "./componentes/Projectes/Project/Todos/index"
 
 import reportWebVitals from './reportWebVitals';
 
@@ -14,7 +17,10 @@ ReactDOM.render(
     <Switch>
        <Route  exact path= "/"> <App/> </Route>
       <Route   path= "/projectes"> <Projectes/> </Route>
-      <Route   path= "/projectestictactoe"> <XikOik/> </Route>
+      <Route   path= "/projectes mytodolist"> <Todo/> </Route>
+      <Route   path= "/projectes tictactoe"> <XikOik/> </Route>
+      <Route   path= "/projectes githubprofilesearcher"> <Github/> </Route>
+      <Route   path= "/projectes clicker"> <Clicker/> </Route>
     
     </Switch>
   </div>

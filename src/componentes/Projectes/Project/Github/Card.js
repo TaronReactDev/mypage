@@ -41,7 +41,7 @@ export default function MediaCard(props) {
 
       <CardActions>
         <Button>
-          <a href={props.html_url} target="_blank" style={{textDecoration:"none", color:"black"}}>
+          <a href={props.html_url} target="_blank" rel="noreferrer" style={{textDecoration:"none", color:"black"}}>
             More info
           </a>
         </Button>

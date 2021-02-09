@@ -13,8 +13,7 @@ export default function index() {
     [backgroundImage1, "Github profile searcher","githubprofilesearcher"],
     [backgroundImage2, "Tic-tac-toe","tictactoe"],
     [backgroundImage3, "My to do list","mytodolist"],
-    [backgroundImage4, "github",],
-    [backgroundImage5, "github",],
+    [backgroundImage4, "Clicker","clicker"],
   ];
   const projectes = imagesForProjectes.map((elem) => {
     return <ProjectElement images={elem[0]} text={elem[1]} url={elem[2]}/>;

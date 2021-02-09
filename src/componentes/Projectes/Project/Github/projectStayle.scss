@@ -23,17 +23,5 @@ div#root {
     margin: 20px;
 }
 
-@keyframes example {
-    0%   {background-color: red;}
-    25%  {background-color: yellow;}
-    50%  {background-color: blue;}
-    75% {background-color: green;}
-  }
   
   /* The element to apply the animation to */
-  .gitanimation {
-  
-    background-color: red;
-    animation-name: example;
-    animation-duration: 4s;
-  }

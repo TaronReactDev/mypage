@@ -8,7 +8,7 @@ export default function PleyerResultes(props) {
 
   player1 = resultes
     .filter((elem, i) => {
-      return i % 2 == 0;
+      return i % 2 === 0;
     })
     .map((e) => {
       return <p>{e}</p>;
@@ -16,7 +16,7 @@ export default function PleyerResultes(props) {
 
   player2 = resultes
     .filter((elem, i) => {
-      return i % 2 == 1;
+      return i % 2 === 1;
     })
     .map((e) => {
       return <p>{e}</p>;

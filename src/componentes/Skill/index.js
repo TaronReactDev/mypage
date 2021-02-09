@@ -8,7 +8,7 @@ import "./style.scss";
 export default function skills() {
   return (
     <>
-      <h1>Skill</h1>
+      <h1 id="skill">Skill</h1>
       <div className="skillDiv">
         <LengSkill />
         <ProgramingSkilles />
