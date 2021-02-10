@@ -3,11 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import { BrowserRouter as Router, Switch, Route,  } from "react-router-dom";
-import Projectes from "./componentes/Projectes/index"
-import XikOik from "./componentes/Projectes/Project/X_O/Xikoik"
-import Github from "./componentes/Projectes/Project/Github/GitHubProfileSearcher"
-import Clicker from "./componentes/Projectes/Project/Clicker/index"
-import Todo from "./componentes/Projectes/Project/Todos/index"
+import Projectes from "./container/index"
+import XikOik from "./container/Projectes/X_O/Xikoik"
+import Github from "./container/Projectes/Github/GitHubProfileSearcher"
+import Clicker from "./container/Projectes/Clicker/index"
+import Todo from "./container/Projectes/Todos/index"
+import AboutMe from "./componentes/Information/Aboutme"
+import Canvas from "./container/Projectes/Canvas/index"
 
 import reportWebVitals from './reportWebVitals';
 
@@ -21,6 +23,8 @@ ReactDOM.render(
       <Route   path= "/projectes tictactoe"> <XikOik/> </Route>
       <Route   path= "/projectes githubprofilesearcher"> <Github/> </Route>
       <Route   path= "/projectes clicker"> <Clicker/> </Route>
+      <Route   path= "/aboutme"> <AboutMe/> </Route>
+      <Route   path= "/projectes canvas"> <Canvas/> </Route>
     
     </Switch>
   </div>

@@ -1,7 +1,7 @@
 import React from 'react'
-import FbIcon from "../png/facebook-logo.png"
-import GitHube from "../png/github-logo.jpg"
-import LInkedIn from "../png/linkedin.jpg"
+import FbIcon from "../../img/facebook-logo.png"
+import GitHube from "../../img/github-logo.jpg"
+import LInkedIn from "../../img/linkedin.jpg"
 
 export default function social() {
     return (

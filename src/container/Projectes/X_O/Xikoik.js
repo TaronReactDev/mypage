@@ -25,7 +25,7 @@ export default function Xikoik() {
     ]);
 
     setTurn("X");
-  }, [count]);
+  }, [count,won]);
 
 
   const restartClick = () => {
@@ -38,7 +38,6 @@ export default function Xikoik() {
     setWon(false);
   };
 
-  console.log("count",count, "setnumber",setnumber);
   const clearResult =()=>{
     setSetnumber([]);
     setWinner([]);
@@ -46,7 +45,6 @@ export default function Xikoik() {
     setCount(1)
   }
 
-console.log(winner, count);
   const click = (i, j) => {
     const shallowBoard = bord.map((row) => {
       return [...row];
@@ -111,7 +109,7 @@ console.log(winner, count);
 
       {won ? <div className={"winerDiv"}>Player {turn} Won </div> : bordsquer}
 
-      <button onClick={restartClick} className={"restartbtn"}>
+      <button  onClick={restartClick} className={"restartbtn"}>
         {won ? "Start New Set " : "Restart"}
       </button>
 

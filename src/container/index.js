@@ -1,5 +1,5 @@
 import React from "react";
-import NavBar from "../NavBar/NavBar";
+import NavBar from "../componentes/NavBar/NavBar";
 import ProjectElement from "./ProjectElem";
 import backgroundImage1 from "./Projectimages/githubsearch.jpg";
 import backgroundImage2 from "./Projectimages/tic-tac-toe.jpg";
@@ -14,6 +14,7 @@ export default function index() {
     [backgroundImage2, "Tic-tac-toe","tictactoe"],
     [backgroundImage3, "My to do list","mytodolist"],
     [backgroundImage4, "Clicker","clicker"],
+    [backgroundImage5, "Canvas","canvas"],
   ];
   const projectes = imagesForProjectes.map((elem) => {
     return <ProjectElement images={elem[0]} text={elem[1]} url={elem[2]}/>;

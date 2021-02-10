@@ -1,5 +1,6 @@
 import React from "react";
 import Social from "../Information/Social";
+import Contacts from "../Information/Contacts";
 import {  Link  } from "react-router-dom";
 import "./style.scss";
 
@@ -20,8 +21,9 @@ export default function NavBar() {
         
       </div>
       <Social />
+      <Contacts />
       <div className={"right"}>
-        <a href={"#"}>Taron Sargsyan</a>
+      <Link to="/aboutme">About me</Link>
       </div>
     </div>
   );

@@ -24,4 +24,16 @@ div#root {
 }
 
   
-  /* The element to apply the animation to */
+.navbar{
+width: 100%;
+min-height: 60px;
+background-color: rosybrown;
+display: flex;
+align-items: center;
+padding: 10px;
+justify-content: center;
+}
+.navbar >p{
+   
+    font-size: 25px;margin-left: 10px;
+}

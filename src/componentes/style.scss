@@ -6,9 +6,77 @@ body{
 
 .mainDiv{
 
-    background-image: url("./img/desktop.jpg");
+    background-image: url("../img/desktop.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
 }
+.mainDiv> div{
+    width: 900px;
+}
+.mainDiv >div>p{
+    color:blueviolet;
+    font-size: 35px;
+    font-weight: bold;
+    font-family: cursive;
+    animation-name: fadeInRight;
+    animation-duration: 4s;
+    
+
+}
+
+.mainDiv >div>a{
+    font-size: 55px;
+    color: brown;
+    font-weight: bold;
+    font-family: cursive;
+    text-decoration: none;
+    animation-name: fadeInRightA;
+    animation-duration: 4s;
+
+}
+
+@keyframes fadeInRight {
+    0% {
+       opacity: 0;
+       transform: translateX(-980px);
+    }
+    100% {
+       opacity: 1;
+       transform: translateX(0);
+    }
+ } 
+
+ @keyframes fadeInRightA {
+    0% {
+       opacity: 0;
+    }
+    100% {
+       opacity: 1;
+    }
+ } 
+
+
+ .resulte{
+     display: flex;
+     flex-direction: column;
+     margin: 15px;
+ }
+ 
+ .setnumber{
+     display: flex;
+     flex-direction: row;
+ }
+ .setnumber >p {
+     margin-right: 50px;
+ }
+ 
+ svg.MuiSvgIcon-root{
+     width: 40px;
+     height: 40px;
+ }

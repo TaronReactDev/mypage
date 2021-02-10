@@ -4,7 +4,7 @@ import PleyerResultes from "./PleyerResultes";
 import { Button } from "@material-ui/core";
 import Grid from "@material-ui/core/Grid";
 
-export default function Main() {
+export default function Index() {
   const [clickeCaunt, setClickeCaunt] = useState(0);
   const [firstClick, setFirstClick] = useState(true);
   const [GameSetTime, setGameSetTime] = useState(5000);
@@ -43,13 +43,10 @@ export default function Main() {
     <>
       {alertResult ? (
         <ResultModal startNewSet={startNewSet} clickeCaunt={clickeCaunt} />
-      ) : (
-        <Grid container spacing={1}>
-          <Grid item xs={12} sm={6}>
-            <p style={{ border: "1px solid black", textAlign: "center" }}>
+      ) : (  <> <p >
               Time - {GameSetTime}
             </p>
-            <p style={{ border: "1px solid black", textAlign: "center" }}>
+            <p >
               {" "}
               Cilckes count - {clickeCaunt}
             </p>
@@ -57,15 +54,15 @@ export default function Main() {
               variant="contained"
               color="secondary"
               onClick={firstClick ? handelBtnClic : click}
-              style={{ alignItemes: "center" }}
+            
             >
               Clicker
             </Button>
-          </Grid>
-          <Grid item xs={12} sm={6}>
+        
+         
             <PleyerResultes resultes={resultes} />{" "}
-          </Grid>
-        </Grid>
+        
+      </>
       )}
     </>
   );

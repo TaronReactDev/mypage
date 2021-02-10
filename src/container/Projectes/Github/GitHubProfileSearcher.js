@@ -3,6 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
 import axios from "axios";
 import Pagination from "@material-ui/lab/Pagination";
+import GitHubIcon from '@material-ui/icons/GitHub';
 import PersonalCard from "./Card";
 import "./projectStayle.scss";
 
@@ -65,6 +66,7 @@ export default function GitHubProfileSearcher() {
 
   return (
     <>
+    <div className="navbar"><GitHubIcon/><p>Search any profile in GitHub</p></div>
       <form
         className={classes.root, "gitanimation"}
         noValidate

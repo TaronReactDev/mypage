@@ -1,5 +1,4 @@
 import React from "react";
-import Grid from "@material-ui/core/Grid";
 
 export default function PleyerResultes(props) {
   var resultes = props.resultes;
@@ -27,19 +26,21 @@ export default function PleyerResultes(props) {
   });
 
   return (
-    <Grid container spacing={1}>
-      <Grid item xs={8} sm={4}>
-        <p>Setnumber</p>
+    <div className="resulte">
+      <div className="setnumber">
+        {" "}
+        <p >Setnumber</p>
         {set}
-      </Grid>
-      <Grid item xs={8} sm={4}>
+      </div>
+      <div className="setnumber">
+        {" "}
         <p>Player 1</p>
         {player1}
-      </Grid>
-      <Grid item xs={8} sm={4}>
+      </div>
+      <div className="setnumber">
         <p>Player 2</p>
         {player2}
-      </Grid>
-    </Grid>
+      </div>
+    </div>
   );
 }
