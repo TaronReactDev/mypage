@@ -15,6 +15,15 @@
   opacity: 0.85;
   transition: opacity 1s;
   align-items: center !important;
+
+  &:hover {
+    opacity: 1;
+    .projectDescription {
+      animation-name: discriptionopacity;
+      animation-duration: 1s;
+      opacity: 1;
+    }
+  }
 }
 
 .projectDescription {
@@ -24,28 +33,26 @@
   font-weight: bold;
   transform: display 1s;
   margin: 0 auto;
-  
+}
+.projElemLink {
+  text-decoration: none;
+  color: black;
 }
 
-.projElem:hover {
-  opacity: 1;
-  .projectDescription{
-    animation-name: discriptionopacity;
-    animation-duration: 1s;
+@keyframes discriptionopacity {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
     opacity: 1;
   }
- }
-
- @keyframes discriptionopacity {
-   0% {opacity: 0;}
-   25% {opacity: 0.25;}
-   50% {opacity: 0.5;}
-   75% {opacity: 0.75;}
-    100% {opacity: 1;}
-    
-  }
-
-  .projElemLink{
-    text-decoration: none;
-    color: black;
-  }
+}

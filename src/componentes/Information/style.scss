@@ -1,0 +1,59 @@
+.mainAboutme {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.containerAboutme {
+  max-width: 1500px;
+  height: 100%;
+  background-color: beige;
+  display: flex;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  text-align: center;
+
+  > img {
+    width: 500px;
+    height: 500px;
+
+  }
+
+  >img:nth-child(1){
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+  >img:nth-child(2){
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  >img:nth-child(3){
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+  >img:nth-child(4){
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  > div {
+    max-width: 700px;
+    display: flex;
+    align-items: center;
+   >p{
+     color: brown;
+text-align: center;  
+margin: 15px; }
+  }
+}
+
+h1 {
+  margin-bottom: 150px;
+  margin-top: 50px;
+}
+
+.avatar{
+ max-width: 200px;
+  max-height: 200px;
+}

@@ -1,22 +1,27 @@
-import React, { useState } from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import TextField from "@material-ui/core/TextField";
-import Task from "./Task"
-import "./style.scss"
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    "& .MuiTextField-root": {
-      margin: theme.spacing(1),
-      width: "25ch",
-    },
-  },
-}));
+import React, { useState, useEffect } from "react";
+import Task from "./Task";
+import ListAltIcon from "@material-ui/icons/ListAlt";
+import FilterBtn from "./FilterBtn";
+import InputTask from "./InputTask";
+import "./style.scss";
 
 export default function Index() {
-  const classes = useStyles();
   const [value, setValue] = useState("");
   const [tasks, setTasks] = useState([]);
+  const [filterChange, setFilterChange] = useState("");
+  const [important, setImportant] = useState([]);
+  const [notImportant, setNotImportant] = useState([]);
+
+  useEffect(() => {
+    const importantTask = tasks.filter((elem) => {
+      return elem.task.color === "secondary";
+    });
+    setImportant([...importantTask]);
+    const notImportantTask = tasks.filter((elem) => {
+      return elem.task.color === "";
+    });
+    setNotImportant([...notImportantTask]);
+  }, [tasks]);
 
   const handleChange = (ev) => {
     setValue(ev.target.value);
@@ -26,36 +31,96 @@ export default function Index() {
     const task = {
       id: new Date(),
       task: value,
+      color: "",
+      edit: false,
+      checked: false,
     };
     setTasks([...tasks, { task }]);
     setValue("");
   };
 
-  const todo = tasks.map((el) => {
+  const filterValueChange = (ev) => {
+    setFilterChange(ev.target.value);
+  };
 
+  const onDelet = (id) => () => {
+    const deletArr = tasks.filter((el) => {
+      return el.task.id !== id;
+    });
 
-    return <Task id={el.task.id} task ={el.task.task}/>;
-  });
+    setTasks([...deletArr]);
+  };
+
+  const onFlag = (id) => () => {
+    tasks.filter((el) => {
+      if (el.task.id === id) {
+        el.task.color === ""
+          ? (el.task.color = "secondary")
+          : (el.task.color = "");
+      }
+    });
+
+    setTasks([...tasks]);
+  };
+
+  const editTask = (id) => () => {
+    tasks.find((el) => {
+      return el.task.id === id;
+    }).task.edit = true;
+
+    setTasks([...tasks]);
+  };
+
+  const changeInputEdit = (id, ev) => {
+    tasks.find((el) => {
+      return el.task.id === id;
+    }).task.task = ev.target.value;
+    setTasks([...tasks]);
+  };
+
+  const saveEdit = (id) => () => {
+    tasks.find((el) => {
+      return el.task.id === id;
+    }).task.edit = false;
+    setTasks([...tasks]);
+  };
+
+  const todo = (tasks) => {
+    return tasks.map((el) => {
+      return (
+        <Task
+          id={el.task.id}
+          task={el.task.task}
+          onDelet={onDelet}
+          onFlag={onFlag}
+          color={el.task.color}
+          edit={el.task.edit}
+          editTask={editTask}
+          changeInputEdit={changeInputEdit}
+          saveEdit={saveEdit}
+        />
+      );
+    });
+  };
 
   return (
-    <>
-      <form
-        className={classes.root}
-        onSubmit={submit}
-        noValidate
-        autoComplete="off"
-      >
-        <div>
-          <TextField
-            id="standard-multiline-flexible"
-            label="enter your task"
-            rowsMax={4}
-            value={value}
-            onChange={handleChange}
-          />{" "}
-        </div>{" "}
-      </form>
-      {todo}
-    </>
+    <div className="todoMainDiv">
+      <div className="navbar">
+        <ListAltIcon />
+        <p>Add task</p>
+      </div>
+
+      <FilterBtn
+        filterValueChange={filterValueChange}
+        filterChange={filterChange}
+      />
+      <InputTask value={value} handleChange={handleChange} submit={submit} />
+
+      {filterChange === ""
+        ? todo(tasks)
+        : filterChange === "important"
+        ? todo(important)
+        : todo(notImportant)}
+    </div>
   );
 }
