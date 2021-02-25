@@ -9,7 +9,6 @@ import Github from "./container/Projectes/Github/GitHubProfileSearcher"
 import Clicker from "./container/Projectes/Clicker/index"
 import Todo from "./container/Projectes/Todos/index"
 import AboutMe from "./componentes/Information/Aboutme"
-import Canvas from "./container/Projectes/Canvas/index"
 
 import reportWebVitals from './reportWebVitals';
 
@@ -24,7 +23,6 @@ ReactDOM.render(
       <Route   path= "/projectes githubprofilesearcher"> <Github/> </Route>
       <Route   path= "/projectes clicker"> <Clicker/> </Route>
       <Route   path= "/aboutme"> <AboutMe/> </Route>
-      <Route   path= "/projectes canvas"> <Canvas/> </Route>
     
     </Switch>
   </div>
