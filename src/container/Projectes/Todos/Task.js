@@ -15,18 +15,22 @@ export default function Task({
   editTask,
   changeInputEdit,
   saveEdit,
+  checked,
+  checkedClick
 }) {
   const editChange = (ev) => (id) => {
     changeInputEdit(ev, id);
   };
+
+
   return (
     <div className="oneTask">
       <div className="checkboxWithTask">
-        <input type="checkbox" />
+        <input type="checkbox"  onClick ={checkedClick(id)} />
         {edit ? (
           <input value={task} onChange={editChange(id)}></input>
         ) : (
-          <p key={id}>{task} </p>
+          <p key={id} style={{ textDecorationLine : checked ?  'line-through' : 'none'}}>{task} </p>
         )}
       </div>
 

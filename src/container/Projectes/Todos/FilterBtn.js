@@ -27,8 +27,10 @@ export default function FilterBtn({ filterChange, filterValueChange }) {
           value={filterChange}
           onChange={filterValueChange}
         >
-          <MenuItem value="not important">not important </MenuItem>
           <MenuItem value="important"> important </MenuItem>
+          <MenuItem value="not important">not important </MenuItem>
+          <MenuItem value="checked"> checked </MenuItem>
+          <MenuItem value="not checked"> not checked </MenuItem>
           <MenuItem value=""> all </MenuItem>
         </Select>
       </FormControl>

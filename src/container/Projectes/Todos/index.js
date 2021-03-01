@@ -35,7 +35,7 @@ export default function Index() {
       edit: false,
       checked: false,
     };
-    setTasks([...tasks, { task }]);
+    setTasks([...tasks,  {task} ]);
     setValue("");
   };
 
@@ -85,6 +85,26 @@ export default function Index() {
     setTasks([...tasks]);
   };
 
+  
+  const checkedClick =(id)=>()=>{
+    console.log(id, "is");
+    tasks.filter((el) => {
+if(el.task.id === id){
+  el.task.checked === false ? el.task.checked=true : el.task.checked = false;
+}
+
+
+return el;
+
+
+
+    });
+    
+    setTasks([...tasks]);
+
+  }
+  console.log(tasks);
+
   const todo = (tasks) => {
     return tasks.map((el) => {
       return (
@@ -98,6 +118,8 @@ export default function Index() {
           editTask={editTask}
           changeInputEdit={changeInputEdit}
           saveEdit={saveEdit}
+          checked ={el.task.checked}
+          checkedClick={checkedClick}
         />
       );
     });
